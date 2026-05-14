@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package multiple_proto;
+
+import "common.proto";
+
+option go_package = "./multiple/v1;multiple_v1";
+
+// 服务
+service VideoService {
+ // 看
+ rpc Watch(Request) returns (Response) {};
+}

@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+// package hello_proto;
+package grpc_proto; // proto 的命名空间
+// 避免 Package 'hello.v1' does not appear to match directory 'grpc_proto'
+// 选择同名
+
+// 相对路径
+// option go_package = "./hello_grpc";
+// 语法： "路径;包名"
+// 生成到 hello_grpc/v1 目录，包名定为 hello_v1
+option go_package = "./hello_grpc/v1;hello_v1";
+
+// 请求
+message HelloReq {
+  string name    = 1;
+  string message = 2;
+}
+
+// 响应
+message HelloResp {
+  string name    = 1;
+  string message = 2;
+}
+
+// 服务
+service HelloService {
+  // 函数
+  rpc SayHello(HelloReq) returns (HelloResp) {}
+}

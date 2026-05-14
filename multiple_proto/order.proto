@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package multiple_proto;
+import "common.proto";
+
+option go_package = "./multiple/v1;multiple_v1";
+
+// 订单服务
+service OrderService {
+ // 买
+  rpc Buy(Request) returns (Response) {};
+}

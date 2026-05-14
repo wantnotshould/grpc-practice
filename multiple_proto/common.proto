@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package multiple_proto;
+
+option go_package = "./multiple/v1;multiple_v1";
+
+// 请求
+message Request {
+ string name = 1;
+}
+
+// 响应
+message Response {
+ string name = 1;
+}
