@@ -7,11 +7,10 @@ package main
 import (
 	"context"
 	"fmt"
+	stream_v1 "grpc-practice/stream"
 	"io"
 	"log"
 	"time"
-
-	stream_v1 "grpc-practice/stream/stream/v1"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"

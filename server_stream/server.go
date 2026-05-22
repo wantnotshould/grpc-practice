@@ -6,12 +6,11 @@ package main
 
 import (
 	"fmt"
+	stream_v1 "grpc-practice/stream"
 	"io"
 	"log"
 	"net"
 	"time"
-
-	stream_v1 "grpc-practice/stream/stream/v1"
 
 	"google.golang.org/grpc"
 )
